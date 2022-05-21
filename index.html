@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPCM</title>
+</head>
+<body>
+    <script>
+        let a,b,ppcm;
+        a=parseInt(prompt("Entrer la valeur de a"));
+        b=parseInt(prompt("Entrer la valeur de b"));
+        function pgcd(){
+            let reste,dividente,diviseur;
+            dividente=a;
+            diviseur=b;
+            while(reste!=0){
+                reste=dividente%diviseur;
+                dividente=diviseur;
+                diviseur=reste;
+             }
+             return dividente
+        }
+        ppcm= (a*b)/pgcd();
+     alert("Le PPCM de "+ a +" et " + b + " est : " + ppcm);
+    </script>
+</body>
+</html>
